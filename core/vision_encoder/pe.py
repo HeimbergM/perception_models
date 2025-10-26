@@ -274,6 +274,7 @@ class Transformer(nn.Module):
         x: torch.Tensor,
         attn_mask: Optional[torch.Tensor] = None,
         layer_idx: int = -1,
+        #facet = None, #experimental, try to implement qkv hooks!
     ):
         stop_idx = (self.layers + layer_idx) % self.layers
 
